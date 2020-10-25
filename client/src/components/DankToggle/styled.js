@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
-import nope from "../../images/drakeNope.jpg";
-import yep from "../../images/drakeYep.jpg";
+// import nope from "../../images/drakeNope.jpg";
+// import yep from "../../images/drakeYep.jpg";
 
 export const Slider = styled.span`
-  background: ${(props) => (props.toggled ? `url(${yep})` : `url(${nope})`)};
+  background: ${(props) =>
+    props.toggled
+      ? `url(${"https://media.giphy.com/media/l1ug5sWBCJOOGzN84/giphy.gif"})`
+      : `url(${"https://media.giphy.com/media/WQr2xpuQU0YeUhTlXt/giphy.gif"})`};
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   border-radius: 10px;
   display: inline-block;
   height: 20px;
@@ -18,7 +21,6 @@ export const Slider = styled.span`
 `;
 
 export const ToggleLabel = styled.label`
-  background: ${(props) => (props.toggled ? "green" : "red")};
   border: 1px solid red;
   display: flex;
   flex-direction: column;
